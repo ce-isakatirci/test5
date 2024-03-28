@@ -1,1 +1,24 @@
-*.exe filter=lfs diff=lfs merge=lfs -text
+Transaction Monitoring
+21 Mart 2024 Perşembe
+16:09
+RETL sby için transaction monitoring yapilmayacak, RETL için son task RetallOperationApproval bu task üzerinde iken
+Submit yapıldığında Flowx Success olacak, TRANSACTION_MASTER Status = "Waiting for Embargo" olacak, ve
+TRANSACITON tablosundaki PROCESS STATUS = APPROVED olacak.
+PRIV için TransationMonitoring Task eklenecek, FLOWX güncellenecek.
+CORP için TransationMionitoring ElowX akışı mevcut ilernebilr.
+Ul da Multiple transaction listesinde tek tek aksiyon alınması için CONFIRM ve REJECT butonları eklenecek, BE servis ile
+ilgili kayıt için TRANSACITON tablosundaki PROCESS_STATUS = APPROVED yada REJECTED
+Ekrandaki tüm alanlar, readonly modda açılacak, sadece Extend-Cutoff butonu aktif, seçim yapılırsa ilgili işlem için
+ValueDate ve Çutoff parametresi güncelenecek.
+Submit butonuna basıldığında Multiple transaction listesinde tüm işlemler için aksiyon alındığı kontrol edilecek.
+Listedeki tüm işlemler REJECT olursa FlowX sonlanmalı yani Submit butonu REJECT butonu gibi davranmalı.
+TranMonApproval2 ekrandan Submit butonuna bastığında TRANSACTION_MASTER Status = "Waiting for Embargo
+olacak
+Sorular(Cl)
+TRANSACTION. PROCESS_STATUS olarak ne olmali, netleştirelim APPROVED, REJECTED ys?
+Ekranda işlemler için App ve Reject yapıldı ve Send Back ile işlem Entry e döndü, bu durumda giriş kullanıcısı hangi
+işlemlerde aksiyon alacak. Belect edilmiş bir işlemi güncelleyebilir mi, send back kullanım amacı konuşalım.
+PRIV ve CORP için Tran Monitoring yapılacak, BANK ve HEAD sbu için akış nasıl olmalı.
+CORP için TranMon1 tüm işlemlerde aksiyon aldı ve iş 2. onaycıya gitti, 2. onaycı sadece alt taraftaki Submit Belect
+butonlarında aksiyon alabilecek diye anladık, transaction üzerinde bir değişiklik yapması bekleniyor mu, onaylanmış ya
+da reddedilmiş bir işlemi değiştirebilir mi, butonlar aktif olacak mı
